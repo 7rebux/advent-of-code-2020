@@ -11,7 +11,7 @@ fun main() {
         .plus(generateSequence { BigInteger.ZERO }.take(input[input.size-3]).toMutableList()).toMutableList()
 
     for (i in input.drop(0))
-        if (i > 2) possibilities[i] = possibilities[i - 1] + possibilities[i - 2] + possibilities[i - 3]
+        if (i > 2) possibilities[i] = possibilities[i-1] + possibilities[i-2] + possibilities[i-3]
 
     println(possibilities.last())
 }
