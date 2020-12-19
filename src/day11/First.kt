@@ -3,7 +3,7 @@ package day11
 import java.nio.file.Files
 import java.nio.file.Paths
 
-private val input = Files.readAllLines(Paths.get("assets/day11.txt")).map { it.toCharArray() }.toMutableList()
+private var input = Files.readAllLines(Paths.get("assets/day11.txt")).map { it.toCharArray() }.toMutableList()
 
 fun main() {
     // add border as floor
@@ -12,65 +12,56 @@ fun main() {
     input.add(input.size, ".".repeat(input[0].size).toCharArray())
 
     simulate()
-    print(countOccupied())
+    print(countOccupied(input))
 }
 
 fun simulate() {
-    var previous = emptyList<CharArray>()
+    val inputClone = input.map { it.copyOf() }.toMutableList()
+    var previous = emptyList<CharArray>().toMutableList()
 
-    while(input != previous) {
-        println(input.size)
-
-        previous = input
+    // really bad check lol (still works tho)
+    while(countOccupied(previous) == 0 || countOccupied(input) != countOccupied(previous) ) {
+        previous = inputClone.map { it.copyOf() }.toMutableList()
 
         for (y in input.indices) {
             for (x in input[y].indices) {
                 if (input[y][x] == 'L' && countAdjacent(x, y) == 0)
-                    input[y][x] = '#'
+                    inputClone[y][x] = '#'
                 else if (input[y][x] == '#' && countAdjacent(x, y) >= 4)
-                    input[y][x] = 'L'
+                    inputClone[y][x] = 'L'
             }
         }
+        input = inputClone.map { it.copyOf() }.toMutableList()
     }
 }
 
 fun countAdjacent(x: Int, y: Int): Int {
     var count = 0
 
-    if (input[y][x] == '.')
-        return 0
-
     if (input[y-1][x-1] == '#')
         ++count
-
     if (input[y-1][x] == '#')
         ++count
-
     if (input[y-1][x+1] == '#')
         ++count
-
     if (input[y][x-1] == '#')
         ++count
-
     if (input[y][x+1] == '#')
         ++count
-
     if (input[y+1][x-1] == '#')
         ++count
-
     if (input[y+1][x] == '#')
         ++count
-
     if (input[y+1][x+1] == '#')
         ++count
 
     return count
 }
 
-fun countOccupied(): Int {
+fun countOccupied(list: MutableList<CharArray>): Int {
     var count = 0
 
-    for (y in input) {
+    for (y in list) {
         for (x in y) {
             if (x == '#')
                 ++count
