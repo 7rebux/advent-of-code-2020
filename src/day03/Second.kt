@@ -1,10 +1,10 @@
-package day3
+package day03
 
 import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    var result: Long = 1;
+    var result: Long = 1
     val slopes = arrayOf(
         arrayOf(1, 1),
         arrayOf(1, 3),

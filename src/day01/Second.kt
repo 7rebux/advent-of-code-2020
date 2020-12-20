@@ -1,4 +1,4 @@
-package day1
+package day01
 
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -11,7 +11,7 @@ fun main() {
             for (h in numbers) {
                 if (i+j+h == 2020) {
                     print(i*j*h)
-                    return;
+                    return
                 }
             }
         }
