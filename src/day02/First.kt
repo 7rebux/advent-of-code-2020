@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    val database = Files.readAllLines(Paths.get("assets/day2.txt"))
+    val database = Files.readAllLines(Paths.get("assets/day02.txt"))
     var valid = 0
 
     for (entry in database) {

@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    val list = Files.readAllLines(Paths.get("assets/day6.txt"))
+    val list = Files.readAllLines(Paths.get("assets/day06.txt"))
     var current = ""
     var sum = 0
 

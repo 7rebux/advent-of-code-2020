@@ -19,7 +19,7 @@ fun main() {
 }
 
 fun checkSlope(down: Int, right: Int): Int {
-    val area = Files.readAllLines(Paths.get("assets/day3.txt"))
+    val area = Files.readAllLines(Paths.get("assets/day03.txt"))
 
     var x = 0
     var count = 0

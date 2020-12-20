@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    val input = Files.readAllLines(Paths.get("assets/day9.txt")).map { it.toLong() }
+    val input = Files.readAllLines(Paths.get("assets/day09.txt")).map { it.toLong() }
     val invalidNumber: Long = 21806024 // output of day9/First.kt
 
     var start = 0

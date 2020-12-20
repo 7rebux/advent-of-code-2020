@@ -7,7 +7,7 @@ import java.nio.file.Paths
  * Could cause an IndexOutOfBoundsException if there are only valid numbers
  */
 fun main() {
-    val input = Files.readAllLines(Paths.get("assets/day9.txt")).map { it.toLong() }
+    val input = Files.readAllLines(Paths.get("assets/day09.txt")).map { it.toLong() }
 
     for (i in input.indices) {
         val number = input[i+25]

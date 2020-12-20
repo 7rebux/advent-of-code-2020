@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    val seats = Files.readAllLines(Paths.get("assets/day5.txt"))
+    val seats = Files.readAllLines(Paths.get("assets/day05.txt"))
     var id = 0
 
     for (line in seats) {

@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    val data = Files.readAllLines(Paths.get("assets/day4.txt"))
+    val data = Files.readAllLines(Paths.get("assets/day04.txt"))
     var passport = ""
     var count = 0
 

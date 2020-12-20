@@ -7,7 +7,7 @@ private val tree = emptyMap<String, MutableSet<String>>().toMutableMap()
 private val ans = emptyList<String>().toMutableList()
 
 fun main() {
-    val rules = Files.readAllLines(Paths.get("assets/day7.txt"))
+    val rules = Files.readAllLines(Paths.get("assets/day07.txt"))
 
     for (r in rules) {
         val bag = r.split(" bag")[0]

@@ -6,7 +6,7 @@ import java.nio.file.Paths
 private val tree = emptyMap<String, MutableMap<String, Int>>().toMutableMap()
 
 fun main() {
-    val rules = Files.readAllLines(Paths.get("assets/day7.txt"))
+    val rules = Files.readAllLines(Paths.get("assets/day07.txt"))
 
     for (r in rules) {
         val bag = r.split(" bag")[0]

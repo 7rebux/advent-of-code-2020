@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 fun main() {
-    val numbers = Files.readAllLines(Paths.get("assets/day1.txt")).map { it.toInt() }
+    val numbers = Files.readAllLines(Paths.get("assets/day01.txt")).map { it.toInt() }
 
     for (i in numbers) {
         for (j in numbers) {

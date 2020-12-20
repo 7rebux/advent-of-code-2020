@@ -6,7 +6,7 @@ import java.nio.file.Paths
 private val commands = arrayOf<List<String>>().toMutableList()
 
 fun main() {
-    val input = Files.readAllLines(Paths.get("assets/day8.txt"))
+    val input = Files.readAllLines(Paths.get("assets/day08.txt"))
 
     input.forEach {
         commands.add(it.split(" "))
