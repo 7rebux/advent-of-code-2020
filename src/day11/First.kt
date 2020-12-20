@@ -15,7 +15,7 @@ fun main() {
     print(countOccupied(input))
 }
 
-fun simulate() {
+private fun simulate() {
     val inputClone = input.map { it.copyOf() }.toMutableList()
     var previous = emptyList<CharArray>().toMutableList()
 
@@ -35,7 +35,7 @@ fun simulate() {
     }
 }
 
-fun countAdjacent(x: Int, y: Int): Int {
+private fun countAdjacent(x: Int, y: Int): Int {
     var count = 0
 
     if (input[y-1][x-1] == '#')
@@ -58,7 +58,7 @@ fun countAdjacent(x: Int, y: Int): Int {
     return count
 }
 
-fun countOccupied(list: MutableList<CharArray>): Int {
+private fun countOccupied(list: MutableList<CharArray>): Int {
     var count = 0
 
     for (y in list) {

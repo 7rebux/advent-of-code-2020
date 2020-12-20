@@ -8,14 +8,14 @@ fun main() {
     var valid = 0
 
     for (entry in database) {
-        if (isValidFirst(entry))
+        if (isValid(entry))
             valid++
     }
 
     print(valid)
 }
 
-fun isValidFirst(entry: String): Boolean {
+private fun isValid(entry: String): Boolean {
     val args = entry.split(" ")
     var count = 0
 

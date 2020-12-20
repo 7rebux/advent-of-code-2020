@@ -22,15 +22,15 @@ fun main() {
         }
     }
 
-    searchFirst("shiny gold")
+    search("shiny gold")
     print(ans.distinct().size)
 }
 
-fun searchFirst(color: String) {
+private fun search(color: String) {
     for (entry in tree) {
         if (color in entry.value) {
             ans.add(entry.key)
-            searchFirst(entry.key)
+            search(entry.key)
         }
     }
 }

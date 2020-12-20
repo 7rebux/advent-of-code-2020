@@ -21,13 +21,13 @@ fun main() {
         }
     }
 
-    println(searchSecond("shiny gold") - 1)
+    println(search("shiny gold") - 1)
 }
 
-fun searchSecond(color: String): Int {
+private fun search(color: String): Int {
     var count = 1
     tree[color]?.iterator()?.forEach { bag ->
-        count += bag.value * searchSecond(bag.key)
+        count += bag.value * search(bag.key)
     }
     return count
 }

@@ -12,7 +12,7 @@ fun main() {
         if (d != "")
             passport += " $d"
         else {
-            if (isValidSecond(passport.substring(1)))
+            if (isValid(passport.substring(1)))
                 count++
             passport = ""
         }
@@ -21,7 +21,7 @@ fun main() {
     print(count)
 }
 
-fun isValidSecond(passport: String): Boolean {
+private fun isValid(passport: String): Boolean {
     val fields = passport.split(" ")
     val values = hashMapOf<String, String>()
 
